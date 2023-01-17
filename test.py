@@ -14,22 +14,31 @@
 #
 # TravelBlog.total_blogs +=1
 
+#
+# class Figure:
+#     type_fig = 'ellipse'
+#     color = 'red'
+#
+#     def __init__(self, start_pt, end_pt, color):
+#         self.start_pt = start_pt
+#         self.end_pt = end_pt
+#         self.color = color
+#
+# fig1 = Figure((10, 5), (100, 20), 'blue')
+#
+# del fig1.color
+#
+# print(*fig1.__dict__)
 
-class Figure:
-    type_fig = 'ellipse'
-    color = 'red'
+class Person:
+    name = 'Сергей Балакирев'
+    job = 'Программист'
+    city = 'Москва'
 
-    def __init__(self, start_pt, end_pt, color):
-        self.start_pt = start_pt
-        self.end_pt = end_pt
-        self.color = color
 
-fig1 = Figure((10, 5), (100, 20), 'blue')
+p1 = Person()
 
-del fig1.color
-
-print(*fig1.__dict__)
-
+print(True) if 'job' in p1.__dict__ else print(False)
 
 
 
