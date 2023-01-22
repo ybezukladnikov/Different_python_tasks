@@ -1,13 +1,21 @@
-string = 'AAAABBXRUUU'
+string = 'AABBXRUUzzzU'
+
+def rle(s):
+    def pack(s, cnt):
+        if cnt > 1:
+            return s + str(cnt)
+        return s
+    ans = []
+
+    lastsym = s[0]
+    lastpos = 0
+    for i in range(len(s)):
+        if s[i] != lastsym:
+            ans.append(pack(lastsym, i - lastpos))
+            lastsym = s[i]
+            lastpos = i
+    ans.append(pack(lastsym, len(s) - lastpos))
+    return ''.join(ans)
 
 
-res = string[0]
-size = len(string)
-count = 0
-dict_my = {}
-dict_my['0'+string[0]] = 1
-# for i in string:
-#     if i ==
-
-print(dict_my)
-
+print(rle(string))
