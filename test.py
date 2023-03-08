@@ -30,16 +30,19 @@
 #
 # print(*fig1.__dict__)
 
-class Person:
-    name = 'Сергей Балакирев'
-    job = 'Программист'
-    city = 'Москва'
+# class Person:
+#     name = 'Сергей Балакирев'
+#     job = 'Программист'
+#     city = 'Москва'
+#
+#
+# p1 = Person()
+#
+# print(True) if 'job' in p1.__dict__ else print(False)
 
 
-p1 = Person()
-
-print(True) if 'job' in p1.__dict__ else print(False)
-
-
+array_1 = ['ddfs', 'sdfe', 'sd']
+array_2 = [i for i in array_1 if len(i) < 3]
+print (array_2)
 
 
