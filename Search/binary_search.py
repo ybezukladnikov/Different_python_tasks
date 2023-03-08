@@ -6,10 +6,10 @@ stop = len(array)-1
 
 class Search:
     def binary_search(self, array, num, start, stop):
-        midle = round((stop - start)/2)
+        midle = (stop - start)//2
         find_ind = start + midle
         if array[find_ind] == num:
-            return midle
+            return find_ind
         elif num > array[find_ind]:
             start+=midle
             return self.binary_search(array, num, start, stop)
@@ -19,4 +19,4 @@ class Search:
 
 
 
-print(Search().binary_search(array,34,0,stop))
+print(Search().binary_search(array,24,0,stop))
