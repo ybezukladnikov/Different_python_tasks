@@ -21,36 +21,8 @@ class Selection_sort:
         return array
 
     def quick_sort(self, array, start, stop):
-        if stop - start <= 1:
-            return
-        ind_pivot = (stop - start) // 2
-        print(ind_pivot)
-        ind_left_ch = ind_pivot
-        ind_right_ch = ind_pivot
-        i = start
-        j = stop
-        while (i < ind_pivot or j > ind_pivot):
+        
 
-            while i < ind_pivot:
-                if array[i] > array[ind_pivot]:
-                    ind_left_ch = i
-                    i += 1
-                    break
-                i += 1
-                ind_left_ch = i
-
-            while j > ind_pivot:
-                if array[j] < array[ind_pivot]:
-                    ind_right_ch = j
-                    j -= 1
-                    break
-                j -= 1
-                ind_right_ch = j
-
-            array[ind_left_ch], array[ind_right_ch] = array[ind_right_ch], array[ind_left_ch]
-            print(array)
-        self.quick_sort(array,ind_pivot+1, stop)
-        self.quick_sort(array, start, ind_pivot - 1)
 
 
 array = [9, 3, 1, 2, 0, 3, 2, 1, -23]

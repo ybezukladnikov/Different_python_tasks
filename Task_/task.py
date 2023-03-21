@@ -15,9 +15,24 @@ class DifTask:
 
 
 
-print(DifTask().super_shift([1,2,3,4,5,6], 8))
+# print(DifTask().super_shift([1,2,3,4,5,6], 8))
 
 
+array = [4, 2, 4, 1, 7, 9, 3, -4]
+
+# print(list(filter(lambda el: el < 0, array)))
+
+
+n = int(input())  # 1 <= n <= 100 000 | Amount of tanks
+Volumes = list(map(int, input().split()))  # Volume of each tank
+answer = 0
+maximal = Volumes[0]
+for i in range(len(Volumes)):
+    maximal = max(Volumes[i], maximal)
+    if Volumes[i] < maximal:
+        answer = -1
+        break
+print(max(Volumes) - min(Volumes) if answer == 0 else answer)
 
 
 
