@@ -1,5 +1,6 @@
 class Lec:
-    array = [3, 4, 2, 4, 9]
+    array = [3, 45, 12, 4, 9]
+
 
     def first_in(self):
 
@@ -18,5 +19,14 @@ class Lec:
                 ans = i
         return ans
 
+    def max_number(self):
+        ans = 0 if len(self.array) else -1
+        if ans != -1:
+            for i in range(1, len(self.array)):
+                if self.array[i] > self.array[ans]:
+                    ans = i
 
-print(Lec().last_in())
+        return self.array[ans]
+
+
+print(Lec().max_number())
