@@ -28,5 +28,18 @@ class Lec:
 
         return self.array[ans]
 
+    def max_second_number(self, array):
+        first_max = max(array[0], array[1])
+        second_max = min(array[0], array[1])
 
-print(Lec().max_number())
+        for i in range(2, len(array)):
+            if array[i] > first_max:
+                second_max = first_max
+                first_max = array[i]
+            elif array[i] > second_max:
+                second_max = array[i]
+
+        return second_max
+
+
+print(Lec().max_second_number([2, 2, 4]))
